@@ -7,10 +7,13 @@
 ## Installation
 
 ```bash
-git clone https://github.com/ChrishanZ/boiler-plate-react-styled.git NAME_OF_PROJECT
 npm install
 npm run dev
 ```
+
+Prod : https://prod-github-actions-test.netlify.app/
+Preprod : https://preprod-github-actions-test.netlify.app/
+Develop : https://develop-github-actions-test.netlify.app/
 
 ## Release
 
