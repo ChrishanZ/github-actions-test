@@ -20,15 +20,27 @@ export default function App() {
         <p>Amount</p>
         <NumericFormat
           thousandSeparator={true}
-          suffix="$"
+          suffix=" $"
           allowNegative={false}
           decimalScale={2}
-          fixedDecimalScale={true}
+          fixedDecimalScale={false}
           value={amount}
           onValueChange={(values) => handleChange(values)}
         />
       </ContainerInput>
-      {amount !== "" && <p>{amount} $</p>}
+      {amount !== "" && (
+        <p>
+          <NumericFormat
+            thousandSeparator={true}
+            suffix=" $"
+            allowNegative={false}
+            decimalScale={2}
+            fixedDecimalScale={false}
+            value={amount}
+            displayType="text"
+          />
+        </p>
+      )}
     </Container>
   );
 }
@@ -54,5 +66,6 @@ const ContainerInput = styled.div`
     padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
+    font-family: "Poppins", Courier, monospace;
   }
 `;
