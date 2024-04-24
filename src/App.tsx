@@ -13,7 +13,7 @@ export default function App() {
 
   return (
     <Container>
-      <TitlePage title={"On : develop"} />
+      <TitlePage title={"On : develop "} />
       <TitlePage title={"input test : "} />
 
       <ContainerInput>
