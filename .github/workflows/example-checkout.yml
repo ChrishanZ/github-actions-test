@@ -1,5 +1,20 @@
-uses: actions/checkout@v4
-  with :
-    sparse-checkout: |
-      .github
-      src
+name: List Files
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  list_files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .github
+            src
+          
+      - name: List files
+        run: ls -R
